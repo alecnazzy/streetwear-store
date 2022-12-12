@@ -8,7 +8,7 @@ export default function Navbar() {
             <ul>
                 <li className={navbar.name}>
                     <Link href="/">
-                        East Coast Streetwear
+                        Placeholder | Streetwear
                     </Link>
                 </li>
                 <li className={navbar.links}>

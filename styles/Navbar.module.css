@@ -15,6 +15,7 @@
 }
 .navbar li:hover {
     text-decoration: line-through;
+    text-decoration-thickness: 0.4rem;
 }
 .navbar .name {
     font-size: 4.5rem;

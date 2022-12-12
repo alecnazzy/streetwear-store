@@ -85,6 +85,18 @@
   align-self: center;
 }
 
+.content h1 {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  /* border: 3px solid green; */
+  font-size: xx-large;
+  color: rgb(78, 48, 48);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 6rem;
+}
+
 .content h2 {
   position: absolute;
   font-size: 3rem;
@@ -95,4 +107,45 @@
   margin-left: 20px;
   margin-top: 20px;
   font-size: 6rem;
+}
+
+.content span {
+  display: flex;
+  flex-direction: row;
+  /* border: 3px solid purple; */
+  justify-content: space-between;
+}
+.content p {
+  /* border: 3px solid purple; */
+  font-size: 3rem;
+  color: rgb(78, 48, 48);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  /* border: 3px solid purple; */
+  font-size: 3rem;
+  color: rgb(78, 48, 48);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+.contact h1 {
+  font-size: 3rem;
+  border-bottom: 1.5px solid black;
+}
+.contact li {
+  list-style: none;
+  margin-right: 70px;
+}
+.contact li:hover {
+  text-decoration: line-through;
 }

@@ -66,15 +66,20 @@ export default function Home({
           </span>
           </div>
           <div className={styles.content}>
+          <h1>WEST COAST x EAST COAST</h1>
             <span>
-            <div>
-              
               <Image src="/matt-moloney-H40tstqbpeU-unsplash.jpg" alt="Our mission" width={800} height={500} />
-            </div>
-            <div>
-              
-              <Image src="/matt-moloney-Wt1fcaAeuD4-unsplash.jpg" alt="Our mission" width={800} height={500} />
-            </div> 
+              <p>SF → NYC → MIA</p>
+            </span>
+            <span>
+              <div className={styles.contact}>
+              <h1>Contact us</h1>
+              <ul>
+                <li><Link href="https://www.instagram.com/" target="_blank">Instagram</Link></li>
+                <li><Link href="https://twitter.com/home" target="_blank">Twitter</Link></li>
+              </ul>
+              </div>
+              <Image src="/matt-moloney-Wt1fcaAeuD4-unsplash.jpg" alt="Our mission" width={800} height={500} /> 
             </span>
           </div>
 
