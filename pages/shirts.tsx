@@ -4,8 +4,9 @@ import clientPromise from '../lib/mongodb'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Footer from '../components/Footer'
 
-export default function ShirtPage({shirts}) {
+export default function ShirtPage({shirts}: {shirts: any}) {
     return (
         <div className="container">
           <Head>
@@ -14,12 +15,16 @@ export default function ShirtPage({shirts}) {
           </Head>
     
             <main>
-              <div className={styles.product_page}>
+
               <Navbar />
+
+              <div className={styles.product_page}>
 
               <ul className={styles.page_links}>
                 <li><Link href="/shirts">Shirts</Link></li>
+                <h2> | </h2>
                 <li><Link href="/sneakers">Sneakers</Link></li>
+                <h2> | </h2>
                 <li><Link href="/hats">Hats</Link></li>
               </ul>
 
@@ -34,6 +39,9 @@ export default function ShirtPage({shirts}) {
                 ))}
               </div>
               </div>
+
+              <Footer />
+
             </main>
           </div>
     )}

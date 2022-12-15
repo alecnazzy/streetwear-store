@@ -1,0 +1,11 @@
+.footer {
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+    bottom: 0;
+}

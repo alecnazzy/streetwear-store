@@ -4,7 +4,7 @@ module.exports = {
         {
           protocol: "https",
           hostname: "user-images.githubusercontent.com",
-          port: '',
+          port: '3000',
           pathname: "/90207985/**"},
       ],
     },

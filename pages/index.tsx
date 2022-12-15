@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export async function getServerSideProps(context: any) {
   try {
@@ -48,19 +49,19 @@ export default function Home({
             <div className={styles.img}>
             <Link href="/shirts">
               <h2>Shirts</h2>
-              <Image src="/shirt-home-display.jpg" alt="Shirts" width={800} height={500} />
+              <Image src="/shirt2-home-display.jpg" alt="Shirts" width={950} height={600} />
               </Link>
             </div>
             <div className={styles.img}>
             <Link href="/sneakers">
               <h2>Sneakers</h2>
-              <Image src="/sneaker2-home-display.jpg" alt="Sneakers" width={800} height={500} />
+              <Image src="/sneaker2-home-display.jpg" alt="Sneakers" width={950} height={600} />
               </Link>
             </div>
             <div className={styles.img}>
             <Link href="/hats">
               <h2>Hats</h2>
-              <Image src="/hat-home-display.jpg" alt="Hats" width={800} height={500} />
+              <Image src="/hat-home-display.jpg" alt="Hats" width={950} height={600} />
               </Link>
             </div>
           </span>
@@ -82,6 +83,8 @@ export default function Home({
               <Image src="/home-content-pic2.jpg" alt="Our mission" width={800} height={500} /> 
             </span>
           </div>
+
+          <Footer />
 
       </main>
 
