@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import navbar from '../styles/Navbar.module.css'
+import Image from 'next/image'
 
 export default function Navbar() {
     return (
@@ -8,13 +9,11 @@ export default function Navbar() {
             <ul>
                 <li className={navbar.name}>
                     <Link href="/">
-                        Placeholder | Streetwear
+                        WxE | Streetwear
                     </Link>
                 </li>
-                <li className={navbar.links}>
-                    <Link href="/">
-                        Us
-                    </Link>
+                <li>
+                    <Image src="/cart2.png" alt="Cart" width={48} height={48} />
                 </li>
             </ul>
             </nav>

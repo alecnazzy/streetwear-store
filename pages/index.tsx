@@ -48,19 +48,19 @@ export default function Home({
             <div className={styles.img}>
             <Link href="/shirts">
               <h2>Shirts</h2>
-              <Image src="/shirt.jpg" alt="Shirts" width={800} height={500} />
+              <Image src="/shirt-home-display.jpg" alt="Shirts" width={800} height={500} />
               </Link>
             </div>
             <div className={styles.img}>
             <Link href="/sneakers">
               <h2>Sneakers</h2>
-              <Image src="/diego-jaramillo-bJlZg69x5lg-unsplash.jpg" alt="Sneakers" width={800} height={500} />
+              <Image src="/sneaker2-home-display.jpg" alt="Sneakers" width={800} height={500} />
               </Link>
             </div>
             <div className={styles.img}>
             <Link href="/hats">
               <h2>Hats</h2>
-              <Image src="/bailey-alexander-pAYZOHbeZzM-unsplash.jpg" alt="Hats" width={800} height={500} />
+              <Image src="/hat-home-display.jpg" alt="Hats" width={800} height={500} />
               </Link>
             </div>
           </span>
@@ -68,7 +68,7 @@ export default function Home({
           <div className={styles.content}>
           <h1>WEST COAST x EAST COAST</h1>
             <span>
-              <Image src="/matt-moloney-H40tstqbpeU-unsplash.jpg" alt="Our mission" width={800} height={500} />
+              <Image src="/home-content-pic1.jpg" alt="Our mission" width={800} height={500} />
               <p>SF → NYC → MIA</p>
             </span>
             <span>
@@ -79,7 +79,7 @@ export default function Home({
                 <li><Link href="https://twitter.com/home" target="_blank">Twitter</Link></li>
               </ul>
               </div>
-              <Image src="/matt-moloney-Wt1fcaAeuD4-unsplash.jpg" alt="Our mission" width={800} height={500} /> 
+              <Image src="/home-content-pic2.jpg" alt="Our mission" width={800} height={500} /> 
             </span>
           </div>
 

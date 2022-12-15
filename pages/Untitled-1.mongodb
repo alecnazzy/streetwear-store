@@ -1,0 +1,63 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+
+
+
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+use('hats');
+db.hats.drop();
+
+// Insert a few documents into the sales collection.
+db.hats.insertMany([
+  { '_id': 17, 'type': 'hat', 'name': 'Hat 1', 'price': 15, 'pic': 'https://user-images.githubusercontent.com/90207985/207718564-15428eaf-4481-4ee8-8d0a-b637b4de4d6b.jpg'},
+  { '_id': 18, 'type': 'hat', 'name': 'Hat 2', 'price': 15, 'pic': 'https://user-images.githubusercontent.com/90207985/207718576-2ffaaf39-8667-4583-ab41-0da235ac7f3c.jpg'},
+  { '_id': 19, 'type': 'hat', 'name': 'Hat 3', 'price': 15, 'pic': 'https://user-images.githubusercontent.com/90207985/207718599-bd22ed09-f4dd-4aef-a149-14c140b42045.jpg'}
+]);
+
+use('shirts');
+db.shirts.drop();
+
+db.shirts.insertMany([
+  { '_id': 1, 'type': 'shirt', 'name': 'Shirt 1',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718173-219b577a-9356-4eb5-8c92-7977b972c00b.jpg'},
+  { '_id': 2, 'type': 'shirt', 'name': 'Shirt 2',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718198-4fe88620-aa39-4559-936e-265cd1efb800.jpg'},
+  { '_id': 3, 'type': 'shirt', 'name': 'Shirt 3',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718232-247ddb48-2880-4d83-a0de-4d18ecc7af05.jpg'},
+  { '_id': 4, 'type': 'shirt', 'name': 'Shirt 4',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718253-3a1033fc-9b7d-4049-b850-bfd84509518c.jpg'},
+  { '_id': 5, 'type': 'shirt', 'name': 'Shirt 5',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718267-b871915d-1277-4700-b730-df190f1808dd.jpg'},
+  { '_id': 6, 'type': 'shirt', 'name': 'Shirt 6',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718279-ece677fb-c55f-40d2-a125-04b2012dbb49.jpg'},
+  { '_id': 7, 'type': 'shirt', 'name': 'Shirt 7',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718291-75656875-c57a-4e11-ae62-3f40a46e4ad1.jpg'},
+  { '_id': 8, 'type': 'shirt', 'name': 'Shirt 8',  'price': 20, 'pic': 'https://user-images.githubusercontent.com/90207985/207718344-c96d386b-7f89-4d89-b99a-9f3ec8eb2e6f.jpg'}
+])
+
+use('sneakers');
+db.sneakers.drop();
+
+db.sneakers.insertMany([
+  
+  { '_id': 10, 'type': 'sneaker', 'name': 'Sneaker 1', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718388-b889dc99-d52b-4e72-8194-e22314b646f5.jpg'},
+  { '_id': 11, 'type': 'sneaker', 'name': 'Sneaker 2', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718403-ecb010af-c88e-4302-961e-2908e49cff82.jpg'},
+  { '_id': 12, 'type': 'sneaker', 'name': 'Sneaker 3', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718449-7fcc0fc0-32cb-4c03-b9e4-da7c44249618.jpg'},
+  { '_id': 13, 'type': 'sneaker', 'name': 'Sneaker 4', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718431-7845046b-20d2-4ffe-8e95-2563cacccc57.jpg'},
+  { '_id': 14, 'type': 'sneaker', 'name': 'Sneaker 5', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718418-968a12a0-889a-4b34-b40a-ea2f19c40804.jpg'},
+  { '_id': 15, 'type': 'sneaker', 'name': 'Sneaker 6', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718467-39479875-f77c-4d77-bbcf-85b7553e66d1.jpg'},
+  { '_id': 16, 'type': 'sneaker', 'name': 'Sneaker 7', 'price': 70, 'pic': 'https://user-images.githubusercontent.com/90207985/207718480-bd233626-99e7-4dbb-942a-c7cbe26cc6cb.jpg'}
+])
+
+// Run a find command to view items sold on April 4th, 2014.
+// db.sales.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+// Build an aggregation to view total sales for each product in 2014.
+// const aggregation = [
+//   { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+//   { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+// ];
+
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+// db.sales.aggregate(aggregation);

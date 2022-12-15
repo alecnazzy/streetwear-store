@@ -22,6 +22,34 @@
   color: rgb(78, 48, 48);
   font-family: 'Courier New', Courier, monospace;
 }
+.product_page ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: xx-large;
+  color: rgb(78, 48, 48);
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom: 2px solid rgb(206, 204, 204);
+}
+.product_page li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 5px 50px 25px 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4rem;
+}
+.product_page li:hover {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+.product_page .page_links {
+  border-bottom: 2px solid rgb(206, 204, 204);
+}
 
 .img {
   /* border-radius: 10px; */
@@ -148,4 +176,48 @@
 }
 .contact li:hover {
   text-decoration: line-through;
+}
+
+/* product pages */
+
+.product_page h1 {
+  font-size: 3rem;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(78, 48, 48);
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+main .product_display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.product_display .products:hover{
+  border-bottom: 2px solid rgb(206, 204, 204);
+}
+.product_display .products {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  margin: 20px 8px 20px 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  font-weight: 400;
+}
+.products p {
+  font-size: x-large;
+  font-weight: 500;
 }
