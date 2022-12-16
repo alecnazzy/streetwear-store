@@ -48,9 +48,9 @@ export default function HatPage({hats}:{hats: any}) {
 
     export async function getStaticProps() {
       const client = await clientPromise;
-      const db = client.db("hats");
+      const db = client.db("products");
       
-      const hats = await db.collection("hats").find({}).toArray();
+      const hats = await db.collection("products").find({type: "hat"}).toArray();
       
       return {
           props: {

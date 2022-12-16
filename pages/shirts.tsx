@@ -48,9 +48,9 @@ export default function ShirtPage({shirts}: {shirts: any}) {
 
     export async function getStaticProps() {
       const client = await clientPromise;
-      const db = client.db("shirts");
+      const db = client.db("products");
       
-      const shirts = await db.collection("shirts").find({}).toArray();
+      const shirts = await db.collection("products").find({type: "shirt"}).toArray();
       
       return {
           props: {

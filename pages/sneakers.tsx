@@ -48,9 +48,9 @@ export default function SneakerPage({sneakers}:{sneakers: any}) {
 
     export async function getStaticProps() {
       const client = await clientPromise;
-      const db = client.db("sneakers");
+      const db = client.db("products");
       
-      const sneakers = await db.collection("sneakers").find({}).toArray();
+      const sneakers = await db.collection("products").find({type: "sneaker"}).toArray();
       
       return {
           props: {
