@@ -19,4 +19,5 @@ I used a single database and queryed the results based on which page you're on(/
 - Create api endpoints
 - Add sizing to products
 - Add shopping-cart functionality
-- Add login
+- Break down into components
+- Clean up code
