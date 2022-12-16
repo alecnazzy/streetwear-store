@@ -46,15 +46,35 @@ export default function SneakerPage({sneakers}:{sneakers: any}) {
           </div>
     )}
 
-    export async function getStaticProps() {
-      const client = await clientPromise;
-      const db = client.db("products");
-      
-      const sneakers = await db.collection("products").find({type: "sneaker"}).toArray();
-      
-      return {
-          props: {
-          sneakers: JSON.parse(JSON.stringify(sneakers)),
-          },
-      };
+    export async function getServerSideProps() {
+      try {
+          const client = await clientPromise;
+          const db = client.db("products");
+  
+          const sneakers = await db
+              .collection("products")
+              .find({type: "sneaker"})
+              .sort({})
+              .limit(20)
+              .toArray();
+  
+          return {
+              props: { sneakers: JSON.parse(JSON.stringify(sneakers)) },
+          };
+      } catch (e) {
+          console.error(e);
       }
+  }
+
+    // export async function getStaticProps() {
+    //   const client = await clientPromise;
+    //   const db = client.db("products");
+      
+    //   const sneakers = await db.collection("products").find({type: "sneaker"}).toArray();
+      
+    //   return {
+    //       props: {
+    //       sneakers: JSON.parse(JSON.stringify(sneakers)),
+    //       },
+    //   };
+    //   }

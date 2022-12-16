@@ -46,15 +46,36 @@ export default function ShirtPage({shirts}: {shirts: any}) {
           </div>
     )}
 
-    export async function getStaticProps() {
-      const client = await clientPromise;
-      const db = client.db("products");
-      
-      const shirts = await db.collection("products").find({type: "shirt"}).toArray();
-      
-      return {
-          props: {
-          shirts: JSON.parse(JSON.stringify(shirts)),
-          },
-      };
+
+    export async function getServerSideProps() {
+      try {
+          const client = await clientPromise;
+          const db = client.db("products");
+  
+          const shirts = await db
+              .collection("products")
+              .find({type: "shirt"})
+              .sort({})
+              .limit(20)
+              .toArray();
+  
+          return {
+              props: { shirts: JSON.parse(JSON.stringify(shirts)) },
+          };
+      } catch (e) {
+          console.error(e);
       }
+  }
+
+    // export async function getStaticProps() {
+    //   const client = await clientPromise;
+    //   const db = client.db("products");
+      
+    //   const shirts = await db.collection("products").find({type: "shirt"}).toArray();
+      
+    //   return {
+    //       props: {
+    //       shirts: JSON.parse(JSON.stringify(shirts)),
+    //       },
+    //   };
+    //   }
