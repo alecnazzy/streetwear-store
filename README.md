@@ -21,3 +21,4 @@ I used a single database and queryed the results based on which page you're on(/
 - Add shopping-cart functionality
 - Break down into components
 - Clean up code
+- Fix mobile view
