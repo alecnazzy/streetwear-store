@@ -10,7 +10,7 @@ export default function HatPage({hats}:{hats: any}) {
     return (
         <div className="container">
           <Head>
-            <title>Hats</title>
+            <title>WxE → Hats</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
     

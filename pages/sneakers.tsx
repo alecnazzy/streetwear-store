@@ -10,7 +10,7 @@ export default function SneakerPage({sneakers}:{sneakers: any}) {
     return (
         <div className="container">
           <Head>
-            <title>Sneakers</title>
+            <title>WxE → Sneakers</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
     

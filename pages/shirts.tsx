@@ -10,7 +10,7 @@ export default function ShirtPage({shirts}: {shirts: any}) {
     return (
         <div className="container">
           <Head>
-            <title>Shirts</title>
+            <title>WxE → Shirts</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
     
