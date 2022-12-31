@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import clientPromise from '../lib/mongodb'
+import PageLinks from '../components/PageLinks'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import Footer from '../components/Footer'
+import clientPromise from '../lib/mongodb'
+import styles from '../styles/Home.module.css'
+
+
 
 export default function SneakerPage({sneakers}:{sneakers: any}) {
     return (
@@ -17,27 +19,19 @@ export default function SneakerPage({sneakers}:{sneakers: any}) {
             <main>
 
               <Navbar />
-
+              <PageLinks />
               <div className={styles.product_page}>
 
-              <ul className={styles.page_links}>
-                <li><Link href="/shirts">Shirts</Link></li>
-                <h2> | </h2>
-                <li><Link href="/sneakers">Sneakers</Link></li>
-                <h2> | </h2>
-                <li><Link href="/hats">Hats</Link></li>
-              </ul>
-
-              <div className={styles.product_display}>
-                {sneakers.map((sneaker: any) => (
-                  <div key={sneaker._id}>
-                    <div className={styles.products}>
-                    <p>{sneaker.name} ${sneaker.price}</p>
-                    <Image src={sneaker.pic} alt="" width={400} height={400} />
+                <div className={styles.product_display}>
+                  {sneakers.map((sneaker: any) => (
+                    <div key={sneaker._id}>
+                      <div className={styles.products}>
+                      <p>{sneaker.name} ${sneaker.price}</p>
+                      <Image src={sneaker.pic} alt="" width={400} height={400} />
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
               </div>
 
               <Footer />

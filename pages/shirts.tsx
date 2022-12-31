@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import clientPromise from '../lib/mongodb'
+import PageLinks from '../components/PageLinks'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import Footer from '../components/Footer'
+import styles from '../styles/Home.module.css'
+import clientPromise from '../lib/mongodb'
 
 export default function ShirtPage({shirts}: {shirts: any}) {
     return (
@@ -17,27 +17,20 @@ export default function ShirtPage({shirts}: {shirts: any}) {
             <main>
 
               <Navbar />
+              <PageLinks />
 
               <div className={styles.product_page}>
 
-              <ul className={styles.page_links}>
-                <li><Link href="/shirts">Shirts</Link></li>
-                <h2> | </h2>
-                <li><Link href="/sneakers">Sneakers</Link></li>
-                <h2> | </h2>
-                <li><Link href="/hats">Hats</Link></li>
-              </ul>
-
-              <div className={styles.product_display}>
-                {shirts.map((shirt: any) => (
-                  <div key={shirt._id}>
-                    <div className={styles.products}>
-                    <p>{shirt.name} ${shirt.price}</p>
-                    <Image src={shirt.pic} alt="" width={400} height={400} />
+                <div className={styles.product_display}>
+                  {shirts.map((shirt: any) => (
+                    <div key={shirt._id}>
+                      <div className={styles.products}>
+                      <p>{shirt.name} ${shirt.price}</p>
+                      <Image src={shirt.pic} alt="" width={400} height={400} />
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
               </div>
 
               <Footer />

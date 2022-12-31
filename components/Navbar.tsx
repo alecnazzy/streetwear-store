@@ -8,9 +8,11 @@ export default function Navbar() {
             <nav>
             <ul>
                 <li className={navbar.name}>
+                   
                     <Link href="/">
                         WxE | Streetwear
                     </Link>
+                   
                 </li>
                 <li>
                     <Image src="/cart2.png" alt="Cart" width={48} height={48} />

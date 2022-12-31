@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import clientPromise from '../lib/mongodb'
+import PageLinks from '../components/PageLinks'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import Footer from '../components/Footer'
+import clientPromise from '../lib/mongodb'
+import styles from '../styles/Home.module.css'
 
 export default function HatPage({hats}:{hats: any}) {
     return (
@@ -17,27 +17,20 @@ export default function HatPage({hats}:{hats: any}) {
             <main>
 
               <Navbar />
-
-              <div className={styles.product_page}>
+              <PageLinks />
               
-              <ul className={styles.page_links}>
-                <li><Link href="/shirts">Shirts</Link></li>
-                <h2> | </h2>
-                <li><Link href="/sneakers">Sneakers</Link></li>
-                <h2> | </h2>
-                <li><Link href="/hats">Hats</Link></li>
-              </ul>
+              <div className={styles.product_page}>
 
-              <div className={styles.product_display}>
-                {hats.map((hat: any) => (
-                  <div key={hat._id}>
-                    <div className={styles.products}>
-                    <p>{hat.name} ${hat.price}</p>
-                    <Image src={hat.pic} alt="" width={400} height={400} />
+                <div className={styles.product_display}>
+                  {hats.map((hat: any) => (
+                    <div key={hat._id}>
+                      <div className={styles.products}>
+                      <p>{hat.name} ${hat.price}</p>
+                      <Image src={hat.pic} alt="" width={400} height={400} />
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
               </div>
 
               <Footer />

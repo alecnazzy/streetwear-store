@@ -9,3 +9,11 @@
     margin-top: 100px;
     bottom: 0;
 }
+
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+}
